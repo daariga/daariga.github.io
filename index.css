@@ -1,0 +1,99 @@
+body
+{
+    background: white;
+    font-family: 'Gentium Book Basic', Cambria, Georgia, serif;
+    color: black;
+}
+
+.body-container
+{
+    width: 700px;
+    margin: auto;
+    padding: 10px;
+    border-color: indigo;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+#manga-ash
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 160px;
+    height: 160px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    background: url("ash.jpg") -188px -5px;
+    border: 5px solid indigo;
+}
+
+.title
+{
+    text-align: center;
+    color: indigo;
+    font-variant: small-caps;
+    font-size: 55px;
+    padding: 10px;
+}
+
+.subtitle
+{
+    background-color: indigo;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    border-color: indigo;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.subtitle A:link
+{
+    text-decoration: none;
+    color: white;
+}
+
+.subtitle A:visited
+{
+    text-decoration: none;
+    color: white;
+}
+
+.subtitle A:hover
+{
+    background-color: white;
+    color: indigo;
+}
+
+.section-title
+{
+    background-color: indigo;
+    color: white;
+    padding-left: 10px;
+    font-variant: small-caps;
+    font-size: 25px;
+    border-color: indigo;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.section-content
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+
+A:link
+{
+    color: indigo;
+    text-decoration: none;
+}
+
+A:hover
+{
+    color: white;
+    background-color: indigo;
+}
