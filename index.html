@@ -429,9 +429,22 @@ MathJax.Hub.Config({
 <div id="toc" class="toc2">
 <div id="toctitle">Ashwin Nanjappa</div>
 <ul class="sectlevel1">
-<li><a href="#_research">Research</a></li>
-<li><a href="#_code">Code</a></li>
-<li><a href="#_blog">Blog</a></li>
+<li><a href="#_research">Research</a>
+<ul class="sectlevel2">
+<li><a href="#_hand_pose_estimation">Hand pose estimation</a></li>
+<li><a href="#_delaunay_triangulation">Delaunay triangulation</a></li>
+</ul>
+</li>
+<li><a href="#_code">Code</a>
+<ul class="sectlevel2">
+<li><a href="#_gstar4d">gStar4D</a></li>
+<li><a href="#_gdel3d">gDel3D</a></li>
+<li><a href="#_greg3d">gReg3D</a></li>
+<li><a href="#_gpu_coursera">GPU Coursera</a></li>
+</ul>
+</li>
+<li><a href="#_tech_blog">Tech blog</a></li>
+<li><a href="#_books">Books</a></li>
 </ul>
 </div>
 </div>
@@ -452,34 +465,54 @@ MathJax.Hub.Config({
 <span class="image"><a class="image" href="https://www.goodreads.com/ashwin"><img src="goodreads.png" alt="goodreads" title="GoodReads"></a></span>
 <span class="image"><a class="image" href="https://www.flickr.com/photos/daariga/"><img src="flickr.png" alt="flickr" title="Flickr"></a></span></p>
 </div>
+<div class="paragraph">
+<p>I am a research fellow at the <a href="http://www.bii.a-star.edu.sg/"><strong>Bioinformatics Institute</strong></a> in Singapore, working with <a href="http://web.bii.a-star.edu.sg/~chengli/"><strong>Cheng Li</strong></a> on GPU-accelerated machine learning algorithms for computer vision.</p>
+</div>
+<div class="paragraph">
+<p>I got my PhD at <a href="http://nus.edu.sg/"><strong>NUS</strong></a> under <a href="http://www.comp.nus.edu.sg/~tants/"><strong>Tan Tiow Seng</strong></a>, where I developed GPU-accelerated algorithms for 3D Delaunay triangulation and regular triangulation.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_research">Research</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>My research focuses on developing GPU-accelerated algorithms for computer vision, machine learning and computational geometry.
+In my CUDA implementations the priority is on elegance in algorithm and code, while utilizing and optimizing the complex GPU architecture to the fullest.</p>
+</div>
+<div class="sect2">
+<h3 id="_hand_pose_estimation">Hand pose estimation</h3>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="ghand.png" alt="ghand">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>GHand</strong> is a GPU-accelerated algorithm developed for realtime hand pose estimation from depth images.
+It can estimate full 3D hand pose with an average joint error of 20mm.
+It runs fully on the GPU with a realtime performance of 64FPS.</p>
+</div>
+<div class="paragraph">
+<p>GHand has been demoed successfully in conferences to researchers and in science festivals to the public.
+It has been found to work well in different camera setups for hands of all shapes, colors and sizes with no prior calibration.</p>
+</div>
+<div class="sect3">
+<h4 id="_publications">Publications</h4>
 <div class="ulist">
 <ul>
 <li>
 <p><strong>GHand: A GPU algorithm for realtime hand pose estimation using depth camera</strong><br>
-To appear in Computer Graphics Forum (Eurographics 2015)<br>
-<a href="papers/ghand_eurographics2015.pdf">PDF</a></p>
+Eurographics, 2015<br>
+<a href="papers/ghand_eurographics2015.pdf">Paper</a>
+•
+<a href="http://dx.doi.org/10.2312/egp.20151033">DOI</a></p>
 </li>
 <li>
 <p><strong>Estimate Hand Poses Efficiently from Single Depth Images</strong><br>
-To appear in International Journal of Computer Vision (IJCV)<br>
-<a href="papers/hand_ijcv2015.pdf">PDF</a></p>
-</li>
-<li>
-<p><strong>Hand Pose Estimation Demo Booth</strong><br>
-Best Booth Award, A*STAR Scientific Conference (ASC) 2014<br>
-<a href="http://www.bii.a-star.edu.sg/aboutBII/news.php?newsid=34">News</a></p>
-</li>
-<li>
-<p><strong>Efficient hand pose estimation from single depth images</strong><br>
-X-periment!, Singapore Science Festival, 2014<br>
-<a href="papers/ghand-xperiment-1.pdf">Poster 1</a>
+International Journal of Computer Vision (IJCV), 2015<br>
+<a href="papers/hand_ijcv2015.pdf">Paper</a>
 •
-<a href="papers/ghand-xperiment-2.pdf">Poster 2</a></p>
+<a href="http://dx.doi.org/10.1007/s11263-015-0826-9">DOI</a></p>
 </li>
 <li>
 <p><strong>Real-time hand pose estimation from depth camera using GPU</strong><br>
@@ -488,6 +521,42 @@ GPU Technology Conference 2014 (South East Asia)<br>
 •
 <a href="papers/ghand-poster.bib">BibTeX</a></p>
 </li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_demos">Demos</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Hand Pose Estimation Demo Booth</strong><br>
+Best Booth Award, A*STAR Scientific Conference (ASC) 2014<br>
+<a href="http://www.bii.a-star.edu.sg/aboutBII/news.php?newsid=34">News</a></p>
+</li>
+<li>
+<p><strong>Efficient hand pose estimation from single depth images</strong><br>
+X-periment!, Singapore Science Festival, 2014<br>
+<a href="papers/ghand-xperiment.pdf">Poster</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_delaunay_triangulation">Delaunay triangulation</h3>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="3ddt.png" alt="3ddt">
+</div>
+</div>
+<div class="paragraph">
+<p>For my PhD thesis, I developed GPU-accelerated algorithms for 3D Delaunay triangulation and 3D regular triangulation.
+Implementations of these algorithms in CUDA are highly optimized and the runtimes are 5x faster when compared to the venerable <strong>CGAL</strong>.</p>
+</div>
+<div class="sect3">
+<h4 id="_publications_2">Publications</h4>
+<div class="ulist">
+<ul>
 <li>
 <p><strong>Delaunay mesh generation using the GPU</strong><br>
 <a href="http://myycai.wix.com/nvidia">Merit Award</a>, NVIDIA Poster Contest,<br>
@@ -508,15 +577,6 @@ ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games (I3D), 2014<br>
 <a href="papers/gdel3d-paper.bib">BibTeX</a>
 •
 <a href="http://dx.doi.org/10.1145/2556700.2556710">DOI</a></p>
-</li>
-<li>
-<p><strong>Instant GLEW</strong><br>
-Packt Publishing, 2013<br>
-<a href="http://www.amazon.com/Instant-GLEW-Ashwin-Nanjappa/dp/1783280476">Book</a>
-•
-<a href="https://github.com/ashwin/instant-glew">Code</a>
-•
-<a href="papers/instant-glew.bib">BibTeX</a></p>
 </li>
 <li>
 <p><strong>gHull: A GPU algorithm for 3D Convex Hull</strong><br>
@@ -542,24 +602,25 @@ Code [<a href="https://github.com/ashwin/gstar4d">1</a>, <a href="https://github
 </div>
 </div>
 </div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_code">Code</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Source code from my research projects and my PhD thesis can be found at Github <a href="https://github.com/ashwin">here</a>.</p>
+<p>Source code from my research, my PhD and other projects can be found at Github <a href="https://github.com/ashwin">here</a>.
+Some of the popular ones are listed here:</p>
 </div>
 <div class="sect2">
 <h3 id="_gstar4d">gStar4D</h3>
 <div class="paragraph">
-<p>The <strong>gStar4D</strong> algorithm computes the 3D Delaunay triangulation on the GPU.</p>
+<p>The <strong>gStar4D</strong> algorithm computes the 3D Delaunay triangulation on the GPU.
+The CUDA implementation of gStar4D is robust and achieves a speedup of up to 5 times over the 3D Delaunay triangulator of CGAL.</p>
 </div>
 <div class="paragraph">
 <p>The gStar4D algorithm uses neighbourhood information in the 3D digital Voronoi diagram as an approximation of the 3D Delaunay triangulation.
 It uses this to perform massively parallel creation of stars of each input point lifted to 4D and employs an unique star splaying approach to splay these 4D stars in parallel and make them consistent.
 The result is the 3D Delaunay triangulation of the input constructed fully on the GPU.</p>
-</div>
-<div class="paragraph">
-<p>Our CUDA implementation of gStar4D is robust and achieves a speedup of up to 5 times over the 3D Delaunay triangulator of CGAL.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -572,11 +633,9 @@ The result is the 3D Delaunay triangulation of the input constructed fully on th
 <div class="sect2">
 <h3 id="_gdel3d">gDel3D</h3>
 <div class="paragraph">
-<p>The <strong>gDel3D</strong> algorithm constructs the Delaunay Triangulation of a set of points in 3D using the GPU.</p>
-</div>
-<div class="paragraph">
-<p>The algorithm used is a combination of incremental insertion, flipping and star splaying.
-The code is written using CUDA programming model of NVIDIA.</p>
+<p>The <strong>gDel3D</strong> algorithm constructs the Delaunay Triangulation of a set of points in 3D using the GPU.
+The algorithm utilizes a novel combination of incremental insertion, flipping and star splaying to construct Delaunay.
+The CUDA implementation is robust and its runtime is 10 times faster when compared to the Delaunay triangulator of <strong>CGAL</strong>.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -589,15 +648,13 @@ The code is written using CUDA programming model of NVIDIA.</p>
 <div class="sect2">
 <h3 id="_greg3d">gReg3D</h3>
 <div class="paragraph">
-<p>The <strong>gReg3D</strong> algorithm computes the 3D regular (weighted Delaunay) triangulation on the GPU.</p>
+<p>The <strong>gReg3D</strong> algorithm computes the 3D regular (weighted Delaunay) triangulation on the GPU.
+Our CUDA implementation of gReg3D is robust and achieves a speedup of up to 4 times over the 3D regular triangulator of CGAL.</p>
 </div>
 <div class="paragraph">
 <p>The gReg3D algorithm extends the star splaying concepts of the gStar4D and gDel3D algorithms to construct the 3D regular (weighted Delaunay) triangulation on the GPU.
 This algorithm allows stars to die, finds their death certificate and uses methods to propagate this information to other stars efficiently.
 The result is the 3D regular triangulation of the input computed fully on the GPU.</p>
-</div>
-<div class="paragraph">
-<p>Our CUDA implementation of gReg3D is robust and achieves a speedup of up to 4 times over the 3D regular triangulator of CGAL.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -608,9 +665,9 @@ The result is the 3D regular triangulation of the input computed fully on the GP
 </div>
 </div>
 <div class="sect2">
-<h3 id="_coursera_heterogenous">Coursera Heterogenous</h3>
+<h3 id="_gpu_coursera">GPU Coursera</h3>
 <div class="paragraph">
-<p>I created this library of code to work offline on the assignments of <strong>Heterogenous Parallel Programming</strong> course offered by <strong>Coursera</strong>.
+<p>I created this library of code to work offline on the assignments of <strong>Heterogenous Parallel Programming</strong>, a GPU/CUDA course offered by <strong>Coursera</strong>.
 Many folks chipped in and have converted this into an easy to use library for the course.</p>
 </div>
 <div class="ulist">
@@ -624,13 +681,36 @@ Many folks chipped in and have converted this into an easy to use library for th
 </div>
 </div>
 <div class="sect1">
-<h2 id="_blog">Blog</h2>
+<h2 id="_tech_blog">Tech blog</h2>
 <div class="sectionbody">
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="choorucode.png" alt="choorucode">
+</div>
+</div>
 <div class="paragraph">
-<p>I blog at <a href="http://choorucode.com/">Chooru.Code</a>.
-It started in Sep 2009 as a journal to capture all kinds of short entries about computing problems, solutions and discoveries I faced every day.
-Since then it has grown to a collection of more than <strong>1600</strong> posts.
-I have been truly overwhelmed by the <strong>2.4 million</strong> visitors who have viewed these posts.</p>
+<p>I write regularly at my tech blog: <a href="http://choorucode.com/">Chooru.Code</a>.
+I started this blog in <strong>Sep 2009</strong> as a journal to jot down whatever I learnt while building systems, compiling libraries, debugging problems, fixing errors and learning new languages.</p>
+</div>
+<div class="paragraph">
+<p>This blog has grown to host a collection of more than <strong>1700 posts</strong>.
+Google has been very generous to my blog and it has received over <strong>2.8 million</strong> visits from every corner on Earth.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_books">Books</h2>
+<div class="sectionbody">
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="books.png" alt="books">
+</div>
+</div>
+<div class="paragraph">
+<p>Reading, writing about and discussing books is a passion of mine. Genres that interest me are the classics, history, science fiction, manga and graphic novels.</p>
+</div>
+<div class="paragraph">
+<p>I love writing reviews of the books I read. Reviews, ratings and excerpts of the hundreds of books I have read since <strong>2006</strong> can all be found <a href="https://daariga.wordpress.com">online</a>.</p>
 </div>
 </div>
 </div>
