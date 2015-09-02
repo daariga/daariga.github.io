@@ -300,6 +300,14 @@ td.hdlist1,td.hdlist2{vertical-align:top}
 .imageblock>.title{margin-bottom:0}
 .imageblock.thumb,.imageblock.th{border-width:6px}
 .imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.imageblock {
+  &.text-center > .title {
+    text-align: center !important;
+  }
+  &.text-right > .title {
+    text-align: right !important;
+  }
+}
 .image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
 .image.left{margin-right:.625em}
 .image.right{margin-left:.625em}
@@ -486,7 +494,7 @@ My <strong>CUDA</strong> implementations are highly optimized and are currently 
 <h2 id="_research">Research</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>My research focuses on designing <strong>GPU-accelerated algorithms</strong> for solving biological problems involving computer vision, machine learning and computational geometry.
+<p>My research focuses on designing <strong>GPU-accelerated algorithms</strong> for solving problems in machine vision and 3D computational geometry.
 I particularly like solutions that have <strong>elegance</strong> in both algorithm and source code.
 My source code implementations are highly optimized to utilize the complex massively parallel GPU architecture to the fullest.</p>
 </div>
@@ -505,17 +513,24 @@ It works with different depth cameras and types of rodents, thus enabling neuros
 </div>
 <div class="sect2">
 <h3 id="_hand_pose_estimation">Hand pose estimation</h3>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="ghand.png" alt="ghand">
-</div>
-</div>
 <div style="text-align: center">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/QS0oyGz_zSQ" frameborder="0" allowfullscreen></iframe>
 </div>
 <br />
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="ghand.png" alt="ghand">
+</div>
+<div class="title">Demo of GHand system</div>
+</div>
+<div class="imageblock text-center" style="text-align: center">
+<div class="content">
+<img src="ghand_science_festival.png" alt="ghand science festival">
+</div>
+<div class="title">GHand booth at Singapore Science Festival 2014. Our system was tried by hundreds of visitors.</div>
+</div>
 <div class="paragraph">
-<p><strong>GHand</strong> is a GPU-accelerated algorithm developed for realtime <strong>hand pose estimation</strong> from depth images.
+<p><strong>GHand</strong> is a GPU-accelerated algorithm developed for realtime <strong>hand pose estimation</strong> from depth cameras like Kinect, Primesense or SoftKinetic.
 It can estimate full 3D hand pose with an average joint error of 20mm.
 It runs fully on the GPU with a realtime performance of 64FPS.</p>
 </div>
@@ -583,7 +598,7 @@ X-periment!, Singapore Science Festival, 2014<br>
 </div>
 <br />
 <div class="paragraph">
-<p>For my PhD thesis, I developed GPU-accelerated algorithms for 3D <strong>Delaunay triangulation</strong> and 3D regular triangulation.
+<p>For my PhD thesis, I developed <strong>GPU-accelerated algorithms</strong> for <strong>3D Delaunay triangulation</strong> and 3D regular triangulation.
 The overarching ideas are to maximize utilization of the massively parallel resources in GPU by dualizing discrete Voronoi, fixing 4D convex hull using star splaying and parallel insertion and fixing of triangulation.
 Implementations of these algorithms in CUDA are highly optimized and the runtimes are 5-10x faster when compared to the venerable <strong>CGAL</strong>.</p>
 </div>
@@ -728,9 +743,9 @@ Many folks chipped in and have converted this into an easy to use library for th
 </div>
 </div>
 <div class="paragraph">
-<p><strong><a href="http://codeyarns.com/">CodeYarns.com</a></strong> is my tech blog where I have been writing regularly since <strong>2009</strong>.
+<p><strong><a href="http://codeyarns.com/">CodeYarns.com</a></strong> is my tech blog where I have been writing regularly since <strong>2004</strong>.
 I have shared over <strong>1700 posts</strong> on topics such as CUDA, C++, Vim, Eclipse and Ubuntu.
-Google has been very generous and my blog has received well over <strong>2.9 million</strong> visits from programmers all around the world.</p>
+Google has been very generous and my blog has received well over <strong>3 million</strong> visits from programmers all around the world.</p>
 </div>
 </div>
 </div>
